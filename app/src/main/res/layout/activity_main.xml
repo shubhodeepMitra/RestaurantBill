@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+
+    tools:context="com.mitrastudios.www.restaurantbill.MainActivity">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_marginTop="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/buttonPlus"
+        android:layout_alignTop="@+id/buttonMinus"
+        android:layout_toLeftOf="@+id/buttonMinus"
+        android:layout_toStartOf="@+id/buttonMinus"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/buttonMinus"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:layout_alignTop="@+id/buttonPlus"
+        android:layout_toRightOf="@id/buttonMinus"
+        android:id="@+id/buttonEqual"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VAT"
+        android:id="@+id/vatCheckBox"
+        android:layout_below="@+id/buttonPlus"
+        android:layout_alignLeft="@+id/buttonPlus"
+        android:layout_alignStart="@+id/buttonPlus"
+        android:layout_marginTop="38dp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Service Tax"
+        android:id="@+id/serviceTCheckBox"
+        android:layout_below="@+id/vatCheckBox"
+        android:layout_alignLeft="@+id/vatCheckBox"
+        android:layout_alignStart="@+id/vatCheckBox"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bill Please"
+        android:id="@+id/buttonBill"
+        android:layout_below="@id/serviceTCheckBox"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
