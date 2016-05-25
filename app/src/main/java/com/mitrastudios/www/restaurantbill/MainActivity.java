@@ -6,6 +6,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -26,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
     //for edit text
     private EditText mEditText;
+
+    //for discount checkbox
+    private CheckBox mDisCheck;
+
+    //for discount edit text
+    private EditText mDis;
 
     /**
      * a variable that will track that whether the equal to sign is clicked
@@ -55,12 +62,17 @@ public class MainActivity extends AppCompatActivity {
         mClr=(Button)findViewById(R.id.buttonClr);
         mBill=(Button)findViewById(R.id.buttonBill);
         mEditText=(EditText)findViewById(R.id.editText);
+        mDisCheck=(CheckBox)findViewById(R.id.disCheckBox);
+        mDis=(EditText)findViewById(R.id.disEditText);
 
         //initializing the value of the sum to be zero
         mSum=0;
 
         //initializing the value of the eq with zero
         eq=0;
+
+        //by default the edit text for the discount will be off
+        mDis.setEnabled(false);
 
 
 
@@ -144,6 +156,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+            }
+        });
+
+
+        /**
+         * to enable and disable discount edit text
+         */
+        mDisCheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox temp = (CheckBox)v;
+                if(temp.isChecked()==true)
+                    mDis.setEnabled(true);
+                else
+                    mDis.setEnabled(false);
             }
         });
 

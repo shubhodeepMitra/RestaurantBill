@@ -46,16 +46,39 @@
         android:layout_alignTop="@+id/buttonPlus"
         android:layout_toRightOf="@id/buttonEqual"
         android:id="@+id/buttonClr"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/disCheckBox"
+        android:layout_below="@+id/buttonPlus"
+        android:layout_alignLeft="@+id/buttonPlus"
+        android:layout_alignStart="@+id/buttonPlus"
+        android:layout_marginTop="32dp"
+        android:text="@string/discount"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/disEditText"
+        android:hint="0"
+        android:inputType="numberDecimal"
+
+        android:layout_alignBottom="@+id/disCheckBox"
+        android:layout_toRightOf="@+id/serviceTCheckBox"
+        android:layout_toEndOf="@+id/serviceTCheckBox"
+        android:layout_marginLeft="5dp"
+        />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="VAT"
         android:id="@+id/vatCheckBox"
-        android:layout_below="@+id/buttonPlus"
-        android:layout_alignLeft="@+id/buttonPlus"
-        android:layout_alignStart="@+id/buttonPlus"
-        android:layout_marginTop="38dp"/>
+        android:layout_below="@+id/disCheckBox"
+        android:layout_alignLeft="@+id/disCheckBox"
+        android:layout_alignStart="@+id/disCheckBox"
+        />
 
     <CheckBox
         android:layout_width="wrap_content"

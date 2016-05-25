@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Restaurant Bill</string>
+    <string name="discount">DISCOUNT</string>
 </resources>
