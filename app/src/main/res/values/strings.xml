@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Restaurant Bill</string>
     <string name="discount">DISCOUNT</string>
+    <string name="bill">BILL</string>
+    <string name="discountText">Discount</string>
+    <string name="vatText">Vat</string>
+    <string name="serviceText">Service Tax (5.8%)</string>
+    <string name="totalText">TOTAL</string>
 </resources>
